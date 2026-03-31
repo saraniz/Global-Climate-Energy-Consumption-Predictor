@@ -1,0 +1,34 @@
+version: '3.8'
+
+# This docker-compose file defines two services: 'api' for the FastAPI backend and 'frontend' for the Streamlit frontend. Both services are connected to a custom network called 'climate-net' to allow communication between them.
+services:
+  # Service 1: The FastAPI Backend
+  api:
+  # The 'build' section specifies the context and Dockerfile for building the API service. The 'ports' section maps port 8000 of the container to port 8000 on the host machine, allowing access to the API. The 'networks' section connects this service to the 'climate-net' network.
+    build:
+    # The 'context' specifies the directory containing the Dockerfile, and 'dockerfile' specifies the name of the Dockerfile to use for building this service.
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    # The 'networks' section connects this service to the 'climate-net' network, allowing it to communicate with other services on the same network.
+    networks:
+      - climate-net
+
+  # Service 2: The Streamlit Frontend
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    ports:
+      - "8501:8501"
+    environment:
+      - API_URL=http://api:8000
+    depends_on:
+      - api
+    networks:
+      - climate-net
+
+networks:
+  climate-net:
+    driver: bridge
