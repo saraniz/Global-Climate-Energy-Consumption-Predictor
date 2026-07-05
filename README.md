@@ -1,5 +1,10 @@
 # Global Energy & Climate Impact Predictor
 
+<p align="center">
+  <img src="weather.jpg" width="45%" /><br/>
+  <b>Architecture Diagram</b>
+</p>
+
 This project predicts future:
 - Primary energy consumption
 - CO2 emissions
@@ -32,6 +37,16 @@ It uses historical country-level data, builds ML models, serves predictions with
 - main.py (FastAPI API)
 - frontend.py (Streamlit UI)
 - Dockerfile, Dockerfile.frontend, docker-compose.yml
+
+<p align="center">
+  <img src="energy.jpg" width="45%" /><br/>
+  <b>Energy Consumption Prediction</b>
+</p>
+
+<p align="center">
+  <img src="climate.jpg" width="45%" /><br/>
+  <b>CO₂ Emissions Prediction</b>
+</p>
 
 ## Setup
 
