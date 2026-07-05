@@ -2,7 +2,6 @@
 
 <p align="center">
   <img src="climate.jpg" width="90%" /><br/>
-  <b>CO₂ Emissions Prediction</b>
 </p>
 
 This project predicts future:
