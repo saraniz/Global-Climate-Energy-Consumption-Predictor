@@ -1,8 +1,8 @@
 # Global Energy & Climate Impact Predictor
 
 <p align="center">
-  <img src="weather.jpg" width="45%" /><br/>
-  <b>Architecture Diagram</b>
+  <img src="climate.jpg" width="90%" /><br/>
+  <b>CO₂ Emissions Prediction</b>
 </p>
 
 This project predicts future:
@@ -39,13 +39,8 @@ It uses historical country-level data, builds ML models, serves predictions with
 - Dockerfile, Dockerfile.frontend, docker-compose.yml
 
 <p align="center">
-  <img src="energy.jpg" width="45%" /><br/>
+  <img src="energy.jpg" width="90%" /><br/>
   <b>Energy Consumption Prediction</b>
-</p>
-
-<p align="center">
-  <img src="climate.jpg" width="45%" /><br/>
-  <b>CO₂ Emissions Prediction</b>
 </p>
 
 ## Setup
